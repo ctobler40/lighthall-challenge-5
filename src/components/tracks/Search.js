@@ -1,6 +1,7 @@
-import React, { useState, useEffect, useContext, Platform } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { Context } from "../../context";
+import { isMobile } from 'react-device-detect';
 
 const Search = () => {
   const [state, setState] = useContext(Context);
@@ -54,12 +55,11 @@ const Search = () => {
   }
 
   const isOnWeb = () => {
-    if (Platform.OS === 'web') {
+    if(isMobile) {
       return true;
-    } else {
+  } else {
       return false;
-    }
-  }
+  }};
 
   // const decrementPageNumber = () => {
   //   if(pageNumber > 1) {
