@@ -19,28 +19,10 @@
     margin-bottom: 2%;
   }
 
-  .navbar-button {
-    background: linear-gradient(90deg, rgb(44, 43, 43) 0%, rgb(215, 165, 0) 100%);
-    height: auto;
-    width: auto;
-    border-radius: 8%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    font-size: larger;
-    color: white;
-    margin-right: 5%;
-    margin-left: 10%;
-  }
-
   .button {
     background: linear-gradient(90deg, rgb(44, 43, 43) 0%, rgb(215, 165, 0) 100%);
     height: auto;
-    width: 1060px;
+    width: auto;
     border-radius: 8%;
     padding: 1%;
     display: flex;

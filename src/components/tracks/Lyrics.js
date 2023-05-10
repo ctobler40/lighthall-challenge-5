@@ -33,6 +33,23 @@ const Lyrics = props => {
       .catch(err => console.log(err));
   }, [id]);
 
+  const breakUpperCase = (lyrics) => {
+    var x = 0;
+    var count = 0;
+    var character='';
+    for(x = 0; x < lyrics.length; x ++) {
+      character = lyrics.charAt(x);
+      if (character === character.toUpperCase() && character !== ' ') {
+        count += 1;
+        lyrics.replace(character, "<br/>");
+        if (character === '.') {
+          break
+        }
+      }
+    }
+    return lyrics + " " + count + " upper cases";
+  };
+
   if (
     track === undefined ||
     lyrics === undefined ||
@@ -52,7 +69,7 @@ const Lyrics = props => {
             <span className="text-secondary">{track.track.artist_name}</span>
           </h5>
           <div className="card-body">
-            <p className="card-text">{lyrics.lyrics.lyrics_body}</p>
+            <p className="card-text">{breakUpperCase((String)(lyrics.lyrics.lyrics_body))}</p>
           </div>
         </div>
 

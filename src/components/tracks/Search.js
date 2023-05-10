@@ -96,15 +96,17 @@ const Search = () => {
               onChange={onChange}
             />
           </div>
-          <button className={isOnWeb ? "button" : "button-mobile"} type="submit">
-            Search {type}
-          </button>
-          <button className={isOnWeb ? "button" : "button-mobile"} type="submit"  onClick={() => {setText(false); setUserInput("")}}>
-            New Search
-          </button>
+          <center>
+            <button className={isOnWeb ? "button" : "button-mobile"} type="submit">
+              Search {type}
+            </button>
+            <button className={isOnWeb ? "button" : "button-mobile"} type="submit"  onClick={() => {setText(false); setUserInput("")}}>
+              New Search
+            </button>
+          </center>
         </form> 
         :
-        <div>
+        <center>
           <div className="text-center mb-4">Please Choose a Topic to Search</div>
           <button className={isOnWeb ? "button" : "button-mobile"} type="submit" onMouseEnter={() => {setType("track")}} onClick={() => {setText(true)}}>
             Search By Track
@@ -115,7 +117,7 @@ const Search = () => {
           <button className={isOnWeb ? "button" : "button-mobile"} type="submit" onMouseEnter={() => {setType("lyrics")}} onClick={() => {setText(true)}}>
             Search By Lyrics
           </button>
-        </div> 
+        </center> 
       }
       <div>
       <div className="h4 text-center card card-body mb-4 p-4">
