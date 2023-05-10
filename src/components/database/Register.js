@@ -27,7 +27,7 @@ function Register() {
       .createUserWithEmailAndPassword(email, password)
       .then((auth) => {
         if (auth) {
-          history("/index");
+          history("/lighthall-challenge-5/index");
         }
       })
       .catch((error) => alert(error.message));
@@ -85,7 +85,7 @@ function Register() {
         </button>
         <div className="password-toggle">
           Already have an account?{" "}
-          <Link to="/login">
+          <Link to="/lighthall-challenge-5/login">
             <button type="button">Login</button>
           </Link>
         </div>

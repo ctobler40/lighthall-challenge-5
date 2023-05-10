@@ -43,7 +43,7 @@ const Lyrics = props => {
   } else {
     return (
       <>
-        <Link to="/index" className="btn btn-dark btn-sm mb-4">
+        <Link to="/lighthall-challenge-5/index" className="btn btn-dark btn-sm mb-4">
           Go Back
         </Link>
         <div className="card">
@@ -78,14 +78,14 @@ const Lyrics = props => {
             </Moment>
           </li>
           <li className="list-group-item">
-            <Link to={'https://open.spotify.com/search/'+(String)(track.track.track_name).replace(' ', "%20")+'%20'+(String)(track.track.artist_name).replace(' ', "%20")}>
+            <Link to={'https://open.spotify.com/search/'+(String)(track.track.track_name).replace(' ', "%20")+'%20'+(String)(track.track.artist_name).replace(' ', "%20")} target="_blank">
               <button className="link-button">
                 View "{(String)(track.track.track_name)}" by {(String)(track.track.artist_name)} on Spotify
               </button>
             </Link>
           </li>
           <li className="list-group-item">
-            <Link to={'https://www.youtube.com/results?search_query='+(String)(track.track.track_name).replace(' ', "+")+'+'+(String)(track.track.artist_name).replace(' ', "+")}>
+            <Link to={'https://www.youtube.com/results?search_query='+(String)(track.track.track_name).replace(' ', "+")+'+'+(String)(track.track.artist_name).replace(' ', "+")} target="_blank">
               <button className="link-button" style={{marginLeft: 25}}>
                 View "{(String)(track.track.track_name)}" by {(String)(track.track.artist_name)} on Youtube
               </button>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, Platform } from "react";
 import axios from "axios";
 import { Context } from "../../context";
 
@@ -53,6 +53,14 @@ const Search = () => {
     }
   }
 
+  const isOnWeb = () => {
+    if (Platform.OS === 'web') {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   // const decrementPageNumber = () => {
   //   if(pageNumber > 1) {
   //     setPageNumber(pageNumber - 1);
@@ -88,23 +96,23 @@ const Search = () => {
               onChange={onChange}
             />
           </div>
-          <button className="button" type="submit">
+          <button className={isOnWeb ? "button" : "button-mobile"} type="submit">
             Search {type}
           </button>
-          <button className="button" type="submit"  onClick={() => {setText(false); setUserInput("")}}>
+          <button className={isOnWeb ? "button" : "button-mobile"} type="submit"  onClick={() => {setText(false); setUserInput("")}}>
             New Search
           </button>
         </form> 
         :
         <div>
           <div className="text-center mb-4">Please Choose a Topic to Search</div>
-          <button className="button" type="submit" onMouseEnter={() => {setType("track")}} onClick={() => {setText(true)}}>
+          <button className={isOnWeb ? "button" : "button-mobile"} type="submit" onMouseEnter={() => {setType("track")}} onClick={() => {setText(true)}}>
             Search By Track
           </button>
-          <button className="button" type="submit" onMouseEnter={() => {setType("artist")}} onClick={() => {setText(true)}}>
+          <button className={isOnWeb ? "button" : "button-mobile"} type="submit" onMouseEnter={() => {setType("artist")}} onClick={() => {setText(true)}}>
             Search By Artist
           </button>
-          <button className="button" type="submit" onMouseEnter={() => {setType("lyrics")}} onClick={() => {setText(true)}}>
+          <button className={isOnWeb ? "button" : "button-mobile"} type="submit" onMouseEnter={() => {setType("lyrics")}} onClick={() => {setText(true)}}>
             Search By Lyrics
           </button>
         </div> 

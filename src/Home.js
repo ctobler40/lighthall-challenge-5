@@ -15,10 +15,10 @@ function Home() {
       <h2 className="home-title">Welcome to LyricFinder!</h2>
       <h2 className="login-title">Helping you find all your favorite songs!</h2>
       <div>
-        <Link to="/login">
+        <Link to="/lighthall-challenge-5/login">
           <button type="submit" className="login-button" style={{marginTop: "10%", marginBottom: "6%"}}>Login</button>
         </Link>
-        <Link to="/register">
+        <Link to="/lighthall-challenge-5/register">
           <button type="submit" className="login-button">Register</button>
         </Link>
       </div>

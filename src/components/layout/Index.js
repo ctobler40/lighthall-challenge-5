@@ -34,7 +34,7 @@ const Index = () => {
     <React.Fragment>
       <Search />
       <Tracks />
-      <Link to='/'>
+      <Link to='/lighthall-challenge-5'>
         <button className="button" style={{marginLeft: 15}} onClick={signOut}>
           Sign Out
         </button>

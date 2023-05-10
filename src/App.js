@@ -21,12 +21,12 @@ const App = () => {
           <Navbar />
           <div className='container'>
             <Routes>
-              <Route exact path='/' Component={Home} />
-              <Route exact path='/index' Component={Index} />
-              <Route exact path="/index/lyrics/track/:id" Component={Lyrics} />
-              <Route exact path='/login' Component={SignIn} />
-              <Route exact path='/logout' Component={SignOut} />
-              <Route exact path='/register' Component={Register} />
+              <Route exact path='/lighthall-challenge-5' Component={Home} />
+              <Route exact path='/lighthall-challenge-5/index' Component={Index} />
+              <Route exact path="/lighthall-challenge-5/lyrics/track/:id" Component={Lyrics} />
+              <Route exact path='/lighthall-challenge-5/login' Component={SignIn} />
+              <Route exact path='/lighthall-challenge-5/logout' Component={SignOut} />
+              <Route exact path='/lighthall-challenge-5/register' Component={Register} />
             </Routes>
           </div>
         </React.Fragment>

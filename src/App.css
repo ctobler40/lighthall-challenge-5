@@ -54,6 +54,23 @@
     margin-bottom: 2%;
   }
 
+  .button-mobile {
+    background: linear-gradient(90deg, rgb(44, 43, 43) 0%, rgb(215, 165, 0) 100%);
+    height: auto;
+    width: auto;
+    border-radius: 8%;
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    top: 0;
+    z-index: 999;
+    font-size: larger;
+    color: white;
+    margin-bottom: 2%;
+  }
+
   .home-container {
     max-width: 1200px; /* Increased max-width to 400px */
     margin: 0 auto;
